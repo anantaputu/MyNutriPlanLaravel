@@ -19,10 +19,10 @@
     <div class="d-flex justify-content-center align-items-center vh-100">
         <div class="card border-0 shadow-sm rounded-4" style="width: 100%; max-width: 800px;">
             <div class="card-body p-4">
-                <!-- <a href="../../index.php" class="btn btn-light rounded-pill px-3 mb-3 d-inline-flex align-items-center" style="position: absolute; left: 1.5rem; top: 1.5rem;">
+                <a href="{{ url('/') }}" class="btn btn-light rounded-pill px-3 mb-3 d-inline-flex align-items-center" style="position: absolute; left: 1.5rem; top: 1.5rem;">
                     <i class='bx bx-arrow-back' style="font-size: 1.2rem;"></i>
                     <span class="ms-2 d-none d-md-inline">Back</span>
-                </a>                 -->
+                </a>                
                 <h2 class="mb-4 text-center">Sign up</h2>
                 <form action="{{ route('register') }}" method="POST">
                     @csrf
@@ -53,6 +53,16 @@
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
                         </div>
+
+                        <div class="mb-3 col-md-4">
+                            <label for="password_confirmation" class="form-label">Confirm Password</label>
+                            <input type="password" class="form-control rounded-pill @error('password_confirmation') is-invalid @enderror"
+                                id="password_confirmation" name="password_confirmation" placeholder="Confirm your password" required>
+                            @error('password_confirmation')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
+                        </div>
+
 
                         <div class="mb-3 col-md-4">
                             <label for="age" class="form-label">Age</label>

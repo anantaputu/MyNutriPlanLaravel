@@ -17,7 +17,7 @@
         <div class="container">
             <a class="navbar-brand" href="#">
                 <!-- <img src="placeholder-logo.svg" alt="MyNutriPlan Logo" height="40"> -->
-                <h4 class="mt-3">MyNutriPlan</h4>
+                <img src="/images/logo.png" alt="Logo MyNutriPlan" class="img-fluid" style="height: 50px; width: 50px;">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
